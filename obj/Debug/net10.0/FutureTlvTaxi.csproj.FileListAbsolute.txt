@@ -1,0 +1,14 @@
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.AssemblyInfoInputs.cache
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.AssemblyInfo.cs
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.csproj.CoreCompileInputs.cache
+C:\Interviews\FutureTlvTaxi\bin\Debug\net10.0\FutureTlvTaxi.exe
+C:\Interviews\FutureTlvTaxi\bin\Debug\net10.0\FutureTlvTaxi.deps.json
+C:\Interviews\FutureTlvTaxi\bin\Debug\net10.0\FutureTlvTaxi.runtimeconfig.json
+C:\Interviews\FutureTlvTaxi\bin\Debug\net10.0\FutureTlvTaxi.dll
+C:\Interviews\FutureTlvTaxi\bin\Debug\net10.0\FutureTlvTaxi.pdb
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.dll
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\refint\FutureTlvTaxi.dll
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.pdb
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\FutureTlvTaxi.genruntimeconfig.cache
+C:\Interviews\FutureTlvTaxi\obj\Debug\net10.0\ref\FutureTlvTaxi.dll
