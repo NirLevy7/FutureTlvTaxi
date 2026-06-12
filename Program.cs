@@ -9,7 +9,7 @@ namespace FutureTlvTaxi
         {
             Console.WriteLine("Starting FutureTLV Autonomous Taxi Service Simulation...\n");
 
-            // יצירת מופע של מנהל הסימולציה
+            // יצירת אובייקט מנהל הסימולציה
             SimulationManager simulation = new SimulationManager();
 
             // הדפסת המיקומים ההתחלתיים של המוניות
@@ -17,12 +17,12 @@ namespace FutureTlvTaxi
 
             int elapsedSeconds = 0;
 
-            // לולאה שמריצה את הסימולציה. בחרתי ב-15 פעימות (5 דקות זמן סימולציה) לצורך ההדגמה
+            // לולאה שמריצה את הסימולציה. הגדרתי 15 פעימות (5 דקות זמן סימולציה) לצורך ההדגמה
             for (int i = 0; i < 15; i++)
             {
                 elapsedSeconds += 20; // כל פעימה מייצגת 20 שניות
 
-                // מריצים את הפעימה של המערכת, אשר מעדכנת את התור ואת המוניות
+                // הרצת פעימה של המערכת, אשר מעדכנת את התור ואת המוניות
                 simulation.Tick(elapsedSeconds);
 
                 // השהיה של שניה וחצי במציאות, כדי שתוכל לראות את הפלט מתעדכן בזמן אמת ולא רץ בבת אחת

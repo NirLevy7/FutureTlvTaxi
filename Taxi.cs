@@ -41,18 +41,18 @@ namespace FutureTlvTaxi
         // פונקציית התנועה שתופעל כל 20 שניות
         public void Move()
         {
-            // אם המונית עומדת או שאין לה נסיעה, אין מה לעשות
+            // אם המונית עומדת או שאין לה נסיעה, לא עושים כלום
             if (State == TaxiState.Standing || CurrentRide == null) return;
 
             double remainingDistance = DistancePerTickKm;
 
-            // לולאה שרצה כל עוד יש למונית "דלק" (מרחק) לעבור באותה פעימה
+            // לולאה שרצה כל עוד יש למונית (מרחק) לעבור באותה פעימה
             while (remainingDistance > 0 && CurrentRide != null)
             {
                 // קביעת היעד הנוכחי: נקודת האיסוף או נקודת הסיום
                 Location destination = IsPickingUpPassenger ? CurrentRide.StartLocation : CurrentRide.EndLocation;
 
-                // תנועה על ציר ה-X קודם (לפי הנחיות השתי-וערב)
+                // תנועה של שתי וערב, תחילה בציר X
                 if (Math.Round(CurrentLocation.X, 3) != Math.Round(destination.X, 3))
                 {
                     double diff = destination.X - CurrentLocation.X;
@@ -60,7 +60,7 @@ namespace FutureTlvTaxi
                     CurrentLocation.X += Math.Sign(diff) * moveX;
                     remainingDistance -= moveX;
                 }
-                // תנועה על ציר ה-Y, אם ציר ה-X כבר תואם ליעד
+                // התאמה לתנועה שביצענו בציר X, כעת תנועה על ציר Y
                 else if (Math.Round(CurrentLocation.Y, 3) != Math.Round(destination.Y, 3))
                 {
                     double diff = destination.Y - CurrentLocation.Y;

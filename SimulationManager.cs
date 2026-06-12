@@ -23,7 +23,7 @@ namespace FutureTlvTaxi
         {
             for (int i = 1; i <= 10; i++)
             {
-                // הגרלת מיקום על גריד של 20x20 קילומטר 
+                // 20X20 הגרלת מיקום על גריד
                 double x = Math.Round(_random.NextDouble() * 20.0, 1);
                 double y = Math.Round(_random.NextDouble() * 20.0, 1);
                 _taxis.Add(new Taxi($"Taxi-{i}", new Location(x, y)));
@@ -45,7 +45,7 @@ namespace FutureTlvTaxi
         {
             GenerateNewRideRequest(); // הוספת הזמנה חדשה 
 
-            // הזזת כל המוניות שנוסעות 
+            // הזזת כל המוניות שנמצאות בתנועה 
             foreach (var taxi in _taxis)
             {
                 taxi.Move();
@@ -77,7 +77,7 @@ namespace FutureTlvTaxi
         {
             int currentQueueSize = _orderQueue.Count;
 
-            // אנחנו עוברים על התור הקיים. חייבים לשמור את הגודל ההתחלתי כדי לא ליצור לולאה אינסופית
+            // מעבר על התור הקיים. חייבים לשמור את הגודל ההתחלתי כדי לא ליצור לולאה אינסופית
             for (int i = 0; i < currentQueueSize; i++)
             {
                 var request = _orderQueue.Dequeue(); // הוצאה מהתור
@@ -105,6 +105,8 @@ namespace FutureTlvTaxi
             return Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y);
         }
 
+
+        // הדפסת סטטוס המערכת לאחר כל פעימה
         private void PrintStatus(int elapsedSeconds)
         {
             Console.WriteLine($"\nAfter {elapsedSeconds} seconds:");
